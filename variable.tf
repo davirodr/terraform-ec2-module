@@ -11,13 +11,13 @@ variable "instance_type" {
 }
 
 variable "enable_ami" {
-  type = bool
-  default = false
+  type        = bool
+  default     = true
   description = "(optional) describe your variable"
 }
 
 variable "list_ami" {
-  type = list(string)
-  default = []
+  type        = list(string)
+  default     = []
   description = "(optional) describe your variable"
 }

@@ -10,7 +10,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami           = var.ami_ids ? data.aws_ami.ubuntu.id : var.ami_ids 
+  ami           = var.ami_ids ? var.ami_ids : data.aws_ami.ubuntu.id
   instance_type = var.instance_type
 
   tags = {

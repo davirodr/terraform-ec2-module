@@ -10,8 +10,3 @@ variable "instance_type" {
   description = "Tipo de instância ec2 usada na AWS"
 }
 
-variable "amis_id" {
-  type = string
-  default = "data.aws_ami.ubuntu.id"
-  description = "(optional) describe your variable"
-}

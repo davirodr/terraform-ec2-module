@@ -17,7 +17,7 @@ variable "instance_type" {
 
 variable "enable_ids" {
   type = bool
-  defaul = false
+  default = false
   description = "(optional) describe your variable"
 }
 

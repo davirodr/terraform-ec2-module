@@ -10,10 +10,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-
-  for_each = toset(var.ami_ids)
-  ami      = each.value
-
+  ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
 
   tags = {

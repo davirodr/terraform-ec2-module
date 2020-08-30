@@ -12,7 +12,7 @@ variable "instance_type" {
 
 variable "enable_sg" {
   type        = bool
-  default     = true
+  default     = false
   description = "(optional) describe your variable"
 }
 

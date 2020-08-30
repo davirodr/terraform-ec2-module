@@ -16,14 +16,8 @@ variable "enable_sg" {
   description = "(optional) describe your variable"
 }
 
-variable "list_sg" {
-  type        = list(string)
-  default     = []
-  description = "(optional) describe your variable"
-}
-
-variable "name" {
-  type        = string
-  default     = "SG-padrao"
+variable "sglist" {
+  type = list(string)
+  default = []
   description = "(optional) describe your variable"
 }

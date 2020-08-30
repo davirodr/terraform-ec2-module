@@ -1,3 +1,14 @@
+data "aws_security_group" "default" {
+  filter {
+    name   = "group-name"
+    values = ["default"]
+  }
+  tags = {
+    produto = "default"
+  }
+}
+
+
 resource "aws_security_group" "allow_tls" {
   count       = var.enable_sg ? 1 : 0
   name        = "allow_tls"
@@ -6,7 +17,7 @@ resource "aws_security_group" "allow_tls" {
 
   dynamic "ingress" {
     iterator = port
-    for_each  = var.list_sg
+    for_each = var.list_sg
     content {
       from_port   = port.value
       to_port     = port.value

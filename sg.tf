@@ -4,7 +4,7 @@ resource "aws_security_group" "allow_tls" {
   description = "Allow TLS inbound traffic"
 
 
-  ingress {
+  dynamic "ingress" {
     interator = port
     for_each  = var.list_sg
     content {

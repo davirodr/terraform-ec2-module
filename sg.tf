@@ -5,7 +5,7 @@ resource "aws_security_group" "allow_tls" {
 
 
   dynamic "ingress" {
-    interator = port
+    iterator = port
     for_each  = var.list_sg
     content {
       from_port   = port.value

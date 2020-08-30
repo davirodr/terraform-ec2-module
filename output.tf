@@ -5,3 +5,7 @@ output "ip_public" {
 output "ip_private" {
   value = "${aws_instance.web[*].private_ip}"
 }
+
+output "instance_id" {
+  value = "${aws_instance.web[*].id}"
+}

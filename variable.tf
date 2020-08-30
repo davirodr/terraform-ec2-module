@@ -9,15 +9,3 @@ variable "instance_type" {
   default     = "t2.micro"
   description = "Tipo de instância ec2 usada na AWS"
 }
-
-variable "enable_sg" {
-  type        = bool
-  default     = false
-  description = "(optional) describe your variable"
-}
-
-variable "sglist" {
-  type        = list(string)
-  default     = []
-  description = "(optional) describe your variable"
-}

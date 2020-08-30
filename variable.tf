@@ -12,12 +12,12 @@ variable "instance_type" {
 
 variable "enable_sg" {
   type        = bool
-  default     = false
+  default     = true
   description = "(optional) describe your variable"
 }
 
 variable "list_sg" {
   type        = list(string)
-  default     = ["ami-0758470213bdd23b1", "ami-0758470213bdd23b2"]
+  default     = []
   description = "(optional) describe your variable"
 }

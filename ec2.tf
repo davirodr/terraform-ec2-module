@@ -10,9 +10,9 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami           = var.enable_sg ? var.list_sg : data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
- // vpc_security_group_ids = var.enable_sg ? aws_security_group.allow_tls[*].id : data.
+  vpc_security_group_ids = var.enable_sg ? aws_security_group.allow_tls[*].id : 1
   tags = {
     Name = var.app_name
   }

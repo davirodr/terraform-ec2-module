@@ -9,7 +9,7 @@ data "aws_security_group" "default" {
 }
 
 
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "sg_optional" {
   count       = var.enable_sg ? 1 : 0
   name        = "allow_tls-${var.name}"
   description = "Allow TLS inbound traffic"
@@ -25,6 +25,7 @@ resource "aws_security_group" "allow_tls" {
       cidr_blocks = ["0.0.0.0/0"]
     }
   }
+  
   ingress {
     description = "22"
     from_port   = 22

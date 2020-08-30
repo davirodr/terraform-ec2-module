@@ -10,9 +10,8 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = data.aws_ami.ubuntu.id
-  instance_type          = var.instance_type
-  vpc_security_group_ids = var.enable_sg ? module.sg.aws_security_group.sg_optional[*].id : module.sg.data.aws_security_group.default.id
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
   tags = {
     Name = var.app_name
   }

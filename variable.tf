@@ -18,6 +18,6 @@ variable "enable_ami" {
 
 variable "list_ami" {
   type = list(string)
-  defaul = []
+  default = []
   description = "(optional) describe your variable"
 }

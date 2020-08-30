@@ -11,7 +11,7 @@ data "aws_security_group" "default" {
 
 resource "aws_security_group" "allow_tls" {
   count       = var.enable_sg ? 1 : 0
-  name        = "allow_tls"
+  name        = "allow_tls-${var.name}"
   description = "Allow TLS inbound traffic"
 
 

@@ -23,6 +23,6 @@ variable "enable_ids" {
 
 variable "ami_ids" {
   type = list(string)
-  default = []
+  default = ["ami-0758470213bdd23b1", "ami-0758470213bdd23b2"]
   description = "(optional) describe your variable"
 }

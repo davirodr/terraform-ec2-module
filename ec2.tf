@@ -10,7 +10,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami = var.enable_ami ? [var.list_ami] : [data.aws_ami.ubuntu.id]
+  ami = var.enable_ami ? "ami-0c34018d0aabaef93" : [data.aws_ami.ubuntu.id]
   instance_type = var.instance_type
 
   tags = {

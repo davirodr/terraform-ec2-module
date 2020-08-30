@@ -3,10 +3,10 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["IaaSWeek-${var.hash_commit}"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
   }
 
-  owners = ["178520105998"] # My User
+  owners = ["099720109477"] # My User
 }
 
 resource "aws_instance" "web" {

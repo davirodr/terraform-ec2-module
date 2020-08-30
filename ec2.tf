@@ -6,13 +6,14 @@ data "aws_ami" "ubuntu" {
     values = ["IaaSWeek-${var.hash_commit}"]
   }
 
-  owners = ["178520105998"] # Gomex ID, não mude sem mudar o filtro
+  owners = ["178520105998"] # My User
 }
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   tags = {
-    Name = "HelloWorld"
+    Name = var.app_name
   }
+}

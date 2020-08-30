@@ -13,3 +13,16 @@ variable "instance_type" {
   default = "t2.micro"
   description = "Tipo de instância ec2 usada na AWS"
 }
+
+
+variable "enable_ids" {
+  type = bool
+  defaul = false
+  description = "(optional) describe your variable"
+}
+
+variable "ami_ids" {
+  type = list(string)
+  default = []
+  description = "(optional) describe your variable"
+}

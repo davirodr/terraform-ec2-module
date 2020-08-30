@@ -3,3 +3,4 @@ output "ip_address" {
     for instance in aws_instance.web:
     instance.id => instance.public_ip
   }
+}

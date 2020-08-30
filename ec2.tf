@@ -10,8 +10,8 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami = var.amis_id
-  instance_type = data.aws_ami.ubuntu.id
+  ami = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
 
   tags = {
     Name = var.app_name

@@ -21,3 +21,9 @@ variable "list_sg" {
   default     = []
   description = "(optional) describe your variable"
 }
+
+variable "name" {
+  type        = string
+  default     = "SG-padrao"
+  description = "(optional) describe your variable"
+}

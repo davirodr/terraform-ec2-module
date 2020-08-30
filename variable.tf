@@ -10,14 +10,14 @@ variable "instance_type" {
   description = "Tipo de instância ec2 usada na AWS"
 }
 
-variable "enable_ami" {
+variable "enable_sg" {
   type        = bool
-  default     = true
+  default     = false
   description = "(optional) describe your variable"
 }
 
-variable "list_ami" {
+variable "list_sg" {
   type        = list(string)
-  default     = []
+  default     = ["ami-0758470213bdd23b1", "ami-0758470213bdd23b2"]
   description = "(optional) describe your variable"
 }

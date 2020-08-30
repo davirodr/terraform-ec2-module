@@ -17,7 +17,7 @@ variable "enable_sg" {
 }
 
 variable "sglist" {
-  type = list(string)
-  default = []
+  type        = list(string)
+  default     = []
   description = "(optional) describe your variable"
 }

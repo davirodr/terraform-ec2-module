@@ -12,6 +12,6 @@ variable "instance_type" {
 
 variable "amis_id" {
   type = string
-  default = "${data.aws_ami.ubuntu.id}"
+  default = "data.aws_ami.ubuntu.id"
   description = "(optional) describe your variable"
 }

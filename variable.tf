@@ -16,7 +16,7 @@ variable "enable_sg" {
   description = "(optional) describe your variable"
 }
 
-variable "security" {
+variable "vpc_security" {
   type = list(string)
   default = []
   description = "(optional) describe your variable"

@@ -1,12 +1,3 @@
-data "aws_security_group" "default" {
-  filter {
-    name   = "group-name"
-    values = ["default"]
-  }
-  tags = {
-    produto = "default"
-  }
-}
 
 
 resource "aws_security_group" "sg_optional" {

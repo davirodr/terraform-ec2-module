@@ -15,3 +15,9 @@ variable "enable_sg" {
   default     = false
   description = "(optional) describe your variable"
 }
+
+variable "security" {
+  type = list(string)
+  default = []
+  description = "(optional) describe your variable"
+}

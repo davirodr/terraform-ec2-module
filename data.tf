@@ -7,4 +7,3 @@ data "aws_security_group" "default" {
     produto = "default"
   }
 }
-

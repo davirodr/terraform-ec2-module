@@ -8,11 +8,10 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Ubuntu
 }
-
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
-  vpc_security_group_ids = var.enable_sg ? aws_security_group.sg_optional[*].id : [data.aws_security_group.default.id]
+  vpc_security_group_ids = var.enable_sg ? var.vpc_security : [data.aws_security_group.default.id]
  
   tags = {
     Name = var.app_name

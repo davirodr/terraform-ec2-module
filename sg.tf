@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg_optional" {
-  count       = var.enable_sg ? 1 : 0 : count.index <= 1 : 
+  count       = var.enable_sg ? 1 : 0
   name        = "allow_tls-${var.name}"
   description = "Allow TLS inbound traffic"
 
